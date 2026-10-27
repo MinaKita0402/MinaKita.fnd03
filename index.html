@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>にせったー</title>
+
+      <!-- Day.jsを入れるっぽい -->
+       <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
+       <!-- relativeTime -->
+
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+
+        <!-- プラグイン -->
+
+        <script>
+      dayjs.extend(dayjs_plugin_relativeTime);
+    </script>
+
+    <script src="dataGenerator.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>にせったー</h1>
+    <button id="refresh">更新</button>
+
+     <!-- ここにフォームを追加する -->
+  <form id="postForm">
+    <input id="postText" type="text" placeholder="つぶやく" />
+    <input id="postImage" type="file" accept="image/*" />
+    <button type="submit">Post</button>
+  </form>
+
+    <div id="newsfeed"></div>
+  </body>
+</html>
+
